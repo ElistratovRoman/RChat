@@ -1,0 +1,61 @@
+$avatar_margin: 14px
+$avatar_size: 40px
+
+.msg
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+  padding-right: 54px
+
+  & + .msg
+    margin-top: 30px
+
+  &__text
+    padding: 15px 16px
+    background: white
+    border-radius: 4px
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1)
+    color: #878787
+    line-height: 1.43
+    font-size: 14px
+
+    strong
+      color: #333333
+
+  &__avatar
+    max-width: $avatar_size
+    max-height: $avatar_size
+    margin-right: $avatar_margin
+    img
+      max-width: 100%
+      border: 1px solid white
+      border-radius: 100%
+  &--owner
+    justify-content: flex-end
+    padding-right: 0
+    padding-left: 54px
+
+    .msg__avatar
+      margin-right: 0
+      margin-left: $avatar_margin
+
+  &--with-date
+    padding-bottom: 60px
+    position: relative
+
+    .msg__date
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      text-align: center
+      color: #b7b7b7
+
+  &--operation
+    .msg__text
+      text-align: left
+
+    .msg__text-title
+      font-size: 16px
+      color: #262626
+      padding-bottom: 8px
